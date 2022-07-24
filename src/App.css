@@ -116,6 +116,17 @@ li:hover {
   cursor: pointer;
 }
 
+.active-nav li::after,
+li.active-destination::after{
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color) !important;
+}
+
 /* -------------------------- */
 
 body {
@@ -167,6 +178,11 @@ main {
   letter-spacing: 2px;
   color: #000000;
   background-color: var(--main-color);
+}
+
+.home .circle:hover {
+  box-shadow: 0 0 0 60px #00000050;
+  cursor: pointer;
 }
 
 /* -------------------------- */

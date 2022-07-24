@@ -1,16 +1,16 @@
 import React from "react";
 import logopic from "../images/logo.png"
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
     return ( 
         <nav>
             <div className="logo"><img src={logopic} alt="logo"/></div>
             <ul>
-                <Link to="/home"><li><b>00</b> HOME</li></Link>
-                <Link to="/destination"><li><b>01</b> DESTINATION</li></Link>
-                <Link to="/crew"><li><b>02</b> CREW</li></Link>
-                <Link to="/technology"><li><b>03</b> TECHNOLOGY</li></Link>
+                <NavLink to="/home" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>00</b> HOME</li></NavLink>
+                <NavLink to="/destination" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>01</b> DESTINATION</li></NavLink>
+                <NavLink to="/crew" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>02</b> CREW</li></NavLink>
+                <NavLink to="/technology" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>03</b> TECHNOLOGY</li></NavLink>
             </ul>
         </nav>
     );

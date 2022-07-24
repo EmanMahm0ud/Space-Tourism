@@ -1,7 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #ffffff;
+  --secondary-color: #d0d6f9;
+}
+
+h1 {
+  font-size: 150px;
+  font-weight: 400;
+  font-family: "Bellefair", serif;
+}
+
+h2 {
+  font-size: 100px;
+  font-weight: 400;
+  font-family: "Bellefair";
+  text-transform: uppercase;
+}
+
+p {
+  font-weight: 400;
+}
+
+.title {
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+}
+
+.title span {
+  opacity: 0.25;
+  font-weight: bold;
+}
+
+.description {
+  font-family: "Barlow";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 10px 0;
+  color: var(--secondary-color);
 }
 
 /* -------------------------- */
@@ -24,7 +73,7 @@ nav {
   display: block;
 }
 
-ul {
+nav ul {
   padding: 0 80px;
   list-style: none;
   display: flex;
@@ -32,7 +81,7 @@ ul {
   backdrop-filter: blur(81.5485px);
 }
 
-ul::after {
+nav ul::after {
   content: "";
   position: absolute;
   right: 95%;
@@ -40,16 +89,16 @@ ul::after {
   transform: translateY(-50%);
   width: 40vw;
   height: 2px;
-  background-color: #ffffff;
+  background-color: var(--main-color);
   opacity: 0.25;
 }
 
-li {
+nav li {
   padding: 30px 0;
   margin: 0 20px;
   position: relative;
   letter-spacing: 2.7px;
-  color: #ffffff;
+  color: var(--main-color);
 }
 
 li:hover::after {
@@ -59,7 +108,8 @@ li:hover::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
+  background-color: var(--main-color);
+  opacity: 0.5;
 }
 
 li:hover {
@@ -69,45 +119,257 @@ li:hover {
 /* -------------------------- */
 
 body {
-  background-image: url("./images/home_pg.jpg");
   background-size: cover;
-  color: #ffffff;
+  color: var(--main-color);
+  overflow: hidden;
 }
 
-.home .content {
-  position: absolute;
-  bottom: 130px;
+main {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.content {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
 }
 
 .home section {
-  width: 25%;
+  grid-column: 2 / 6;
+  grid-row: 4 / 8;
 }
 
 .home .title {
-  font-size: 28px;
+  color: var(--secondary-color);
 }
 
-h1 {
-  font-size: 150px;
-  font-weight: 400;
+.home .content {
+  align-items: flex-end;
 }
 
-.big-paragraph {
-  font-size: 18px;
+.home .description {
+  width: 90%;
 }
 
 .home .circle {
+  grid-column: 9 / 12;
+  grid-row: 4 / 8;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-self: center;
   width: 276px;
   height: 276px;
   border-radius: 50%;
   font-size: 32px;
   letter-spacing: 2px;
   color: #000000;
-  background-color: #ffffff;
+  background-color: var(--main-color);
+}
+
+/* -------------------------- */
+
+.destination .content {
+  align-items: flex-end;
+}
+
+.destination img {
+  grid-column: 3 / 6;
+  grid-row: 3 / 8;
+  width: 100%;
+}
+
+.destination .title {
+  grid-column: 2 / 6;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.destination section {
+  grid-column: 8 / 11;
+  grid-row: 3 / 8;
+  width: 115%;
+}
+
+.destination ul {
+  margin-bottom: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.destination li {
+  padding: 10px 0;
+  margin-right: 20px;
+  position: relative;
+}
+
+.destination .description {
+  margin: 20px 0;
+}
+
+.destination .line {
+  width: 100%;
+  height: 1px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: var(--main-color);
+}
+
+.destination footer {
+  display: flex;
+}
+
+.destination footer > div {
+  width: 50%;
+}
+
+.destination .title2 {
+  margin: 10px 0;
+  font-family: "Barlow Condensed";
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.destination .distance,
+.destination .travel-time {
+  font-family: "Bellefair";
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+/* -------------------------- */
+
+.crew {
+  position: absolute;
+  bottom: 0;
+}
+
+.crew h2,
+.technology h2 {
+  font-size: 56px;
+}
+
+.crew .description {
+  font-size: 18px;
+}
+
+.crew .img-container {
+  grid-column: 7 / 11;
+  grid-row: 2 / 9;
+}
+
+.crew img {
+  height: 100%;
+}
+
+.crew .title {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+
+.crew section {
+  grid-column: 3 / 7;
+  grid-row: 3 / 7;
+}
+
+.crew .job {
+  font-family: "Bellefair";
+  font-size: 32px;
+  line-height: 37px;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.crew section .description {
+  width: 80%;
+}
+
+.crew .slider {
+  grid-column: 3;
+  grid-row: 8;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.crew .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  opacity: 0.2;
+}
+
+.crew .circle:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* -------------------------- */
+
+.technology {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.technology .circle {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  border-radius: 50%;
+  border: 1px solid #ffffff40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Condensed";
+  font-size: 28px;
+  color: var(--main-color);
+  background-color: transparent;
+}
+
+.technology .circle:hover {
+  border-color: #ffffff80;
+  cursor: pointer;
+}
+
+.technology .content {
+  align-items: center;
+}
+
+.technology .title {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+
+.technology .sub-title {
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: var(--secondary-color);
+}
+
+.technology .slider {
+  grid-column: 3;
+  grid-row: 3 / 7;
+}
+
+.technology img {
+  grid-column: 8 / 13;
+  grid-row: 4 / 6;
+  justify-self: end;
+  width: 80%;
+}
+
+.technology section {
+  grid-column: 4 / 8;
+  grid-row: 3 / 7;
 }

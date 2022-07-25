@@ -2,7 +2,8 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 import Nav from './Components/Nav';
 import Home from './Components/Home';
@@ -15,7 +16,7 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route exact path='/' element={<Home/>} />
+        <Route exact path='/' element={<Navigate replace to="/home" />} />
         <Route path='/home' element={<Home/>} />
         <Route path='/destination' element={<Destination/>} />
         <Route path='/crew' element={<Crew/>} />

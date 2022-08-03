@@ -1,6 +1,6 @@
 function Planet({name, description, distance, travel_time, i}) {
     return ( 
-        <div key={i}>
+        <div className='planet' key={i}>
             <h2>{name}</h2>
             <p className="description">{description}</p>
             <div className="line"></div>

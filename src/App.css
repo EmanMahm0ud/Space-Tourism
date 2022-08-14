@@ -574,7 +574,7 @@ main {
   /* -------------------------- */
 
   .crew {
-    position: relative;
+    position: static;
   }
 
   .crew section {

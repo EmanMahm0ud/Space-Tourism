@@ -219,6 +219,7 @@ main {
   grid-row: 3 / 8;
   width: 100%;
   transition: opacity 0.3s;
+  min-width: 350px;
 }
 
 .destination .title {
@@ -244,6 +245,10 @@ main {
   padding: 10px 0;
   margin-right: 20px;
   position: relative;
+}
+
+.destination li:last-child {
+  margin-right: 0;
 }
 
 .destination .description {
@@ -473,6 +478,10 @@ main {
     font-size: 36px !important;
   }
 
+  .destination h2 {
+    font-size: 76px !important;
+  }
+
   .title {
     font-size: 22px;
   }
@@ -553,15 +562,16 @@ main {
 
   .destination img {
     grid-column: 2 / 5;
-    grid-row: 2 / 5;
+    grid-row: 2 / 4;
     width: 80%;
+    max-width: 300px;
     justify-self: center;
     align-self: center;
   }
 
   .destination section {
     grid-column: 2 / 5;
-    grid-row: 5 / 8;
+    grid-row: 4 / 8;
     width: 100%;
     margin-top: 40px;
     text-align: center;
@@ -644,7 +654,7 @@ main {
   }
 
   .title {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   nav {
@@ -676,7 +686,7 @@ main {
     margin: 20px 0;
   }
 
-  li:hover::after {
+  nav li:hover::after {
     right: 0;
     width: 4px;
     height: 100%;
@@ -698,7 +708,40 @@ main {
   }
 
   .home section,
-  .home .circle {
+  .home .circle,
+  .destination section,
+  .crew section,
+  .technology section {
     grid-column: 1 / 6;
+  }
+
+  .destination section,
+  .crew section,
+  .technology section {
+    padding: 40px;
+  }
+
+  .destination .title,
+  .crew .title,
+  .technology .title {
+    font-size: 22px;
+    grid-column: 1 / 6;
+    margin: 0;
+    justify-self: center;
+  }
+  
+  .destination img {
+    grid-row: 2 / 4;
+  }
+
+  .destination section {
+    grid-row: 4 / 9;
+    margin-top: 20px;
+  }
+
+  .destination footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }

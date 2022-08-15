@@ -25,7 +25,7 @@ function Destination() {
         <main className="destination">
             <div className="content">
                 <div className="title"><span className="page-num">01 </span>Pick your destination</div>
-                <img src={require(`../images/moon.png`)} alt="moon" />
+                <img src={require(`../images/moon.webp`)} alt="moon" />
                 <section>
                     <ul>
                         <li onClick={() => activeList(0)} className={activeIndex === 0 ? "active-destination" : ""}>MOON</li>

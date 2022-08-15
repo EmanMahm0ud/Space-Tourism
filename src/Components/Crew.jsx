@@ -42,7 +42,7 @@ function Crew() {
                     <div onClick={() => activeList(2)} className={activeIndex === 2 ? "active-crew circle" : "circle"}></div>
                     <div onClick={() => activeList(3)} className={activeIndex === 3 ? "active-crew circle" : "circle"}></div>
                 </div>
-                <div className="img-container"><img src={require("../images/crew1.png")} alt="crew" /></div>
+                <div className="img-container"><img src={require("../images/crew1.webp")} alt="crew" /></div>
             </div>
         </main>
     );

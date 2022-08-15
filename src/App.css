@@ -506,6 +506,7 @@ main {
 
   nav ul {
     padding: 0 20px;
+    z-index: 5;
   }
 
   nav ul::after {
@@ -707,6 +708,8 @@ main {
     z-index: 8;
   }
 
+  /* -------------------------- */
+
   .home section,
   .home .circle,
   .destination section,
@@ -724,7 +727,7 @@ main {
   .destination .title,
   .crew .title,
   .technology .title {
-    font-size: 22px;
+    font-size: 18px;
     grid-column: 1 / 6;
     margin: 0;
     justify-self: center;
@@ -732,6 +735,7 @@ main {
   
   .destination img {
     grid-row: 2 / 4;
+    min-width: 250px;
   }
 
   .destination section {
@@ -743,5 +747,44 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+
+  /* -------------------------- */
+
+  .crew .img-container {
+    grid-column: 1 / 6;
+    grid-row: 2 / 5;
+    max-width: 350px;
+    border-bottom: #d0d6f945 solid 1px;
+  }
+
+  .crew img {
+    max-width: 95%;
+  }
+
+  .crew .slider {
+    grid-row: 5;
+  }
+
+  .crew section {
+    grid-row: 6 / 9;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+
+  .crew h2 {
+    font-size: 26px !important;
+  }
+
+  .crew .job {
+    font-size: 20px;
+  }
+
+  .crew .img-container {
+    max-width: 250px;
+    max-height: 300px;
   }
 }

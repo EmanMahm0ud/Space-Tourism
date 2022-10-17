@@ -154,8 +154,9 @@ li.active-destination::after {
 
 body {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0d0e17;
   color: var(--main-color);
-  overflow: hidden;
 }
 
 main {
@@ -164,7 +165,7 @@ main {
 }
 
 .content {
-  height: 80vh;
+  height: 650px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -311,11 +312,6 @@ main {
 
 /* -------------------------- */
 
-.crew {
-  position: absolute;
-  bottom: 0;
-}
-
 .crew h2,
 .technology h2 {
   font-size: 56px;
@@ -338,6 +334,7 @@ main {
 .crew .title {
   grid-column: 3 / 6;
   grid-row: 1;
+  align-self: center;
 }
 
 .crew section {
@@ -386,7 +383,6 @@ main {
 /* -------------------------- */
 
 .technology {
-  height: 80vh;
   display: flex;
   align-items: center;
 }

@@ -101,7 +101,8 @@ nav li {
   color: var(--main-color);
 }
 
-li:hover::after {
+ul :not(.active-nav) li:hover::after,
+.destination li:not(.active-destination):hover::after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -372,8 +373,11 @@ main {
 }
 
 .crew .circle:hover {
-  opacity: 0.5;
   cursor: pointer;
+}
+
+.crew .circle:not(.active-crew):hover {
+  opacity: 0.5;
 }
 
 .crew .active-crew {
@@ -684,7 +688,7 @@ main {
     margin: 20px 0;
   }
 
-  nav li:hover::after {
+  nav :not(.active-nav) li:hover::after {
     right: 0;
     width: 4px;
     height: 100%;

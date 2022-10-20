@@ -2,11 +2,11 @@ import { useState } from 'react';
 import data from '../Data/technology.json'
 import Tech from './Tech';
 
-function Technology() {
+function Technology(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
     const techs = data.technologies;
-    document.body.style.backgroundImage = `url(${require('../images/technology_bg.jpg')})`;
+    props.setBackground("technology");
 
     const activeList = (key) => {
         // to move the slider to the corresponding content

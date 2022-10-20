@@ -2,11 +2,11 @@ import { useState } from 'react';
 import data from '../Data/crew.json'
 import Staff from './Staff';
 
-function Crew() {
+function Crew(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
     const crew = data.crew;
-    document.body.style.backgroundImage = `url(${require('../images/crew_bg.jpg')})`;
+    props.setBackground("crew");
 
     const activeList = (key) => {
         // to move the slider to the corresponding content

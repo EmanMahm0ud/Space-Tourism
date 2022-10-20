@@ -1,7 +1,7 @@
-function Home() {
+function Home(props) {
 
-    document.body.style.backgroundImage = `url(${require('../images/home_bg.jpg')})`;
-
+    props.setBackground("home");
+    
     return ( 
         <main className="home">
             <div className="content">

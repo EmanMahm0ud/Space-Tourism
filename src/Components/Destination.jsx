@@ -2,11 +2,11 @@ import { useState } from 'react';
 import data from '../Data/destination.json'
 import Planet from './Planet';
 
-function Destination() {
+function Destination(props) {
 
     const [activeIndex, setActiveIndex] = useState(0);
     const planets = data.planets;
-    document.body.style.backgroundImage = `url(${require('../images/destination_bg.jpg')})`;
+    props.setBackground("destination");
 
     const activeList = (key) => {
         // to move the slider to the corresponding content

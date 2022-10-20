@@ -6,6 +6,7 @@ function Nav() {
 
     const expandNav = () => {
         const dashes = document.querySelectorAll(".dash");
+        const dashContainer = document.querySelector(".dash-container")
         const ul = document.querySelector("nav ul");
 
         if (dashes[2].style.opacity === "0") {
@@ -15,6 +16,7 @@ function Nav() {
             dashes[0].style.transform = "none";
             dashes[1].style.transform = "none";
             dashes[2].style.opacity = "1";
+            dashContainer.style.position = "absolute";
         } else {
             ul.style.right = "0";
             dashes[0].style.backgroundColor = "#d0d6f9";
@@ -22,6 +24,7 @@ function Nav() {
             dashes[0].style.transform = "translateY(9px) rotate(45deg)";
             dashes[1].style.transform = "rotate(-45deg)";
             dashes[2].style.opacity = "0";
+            dashContainer.style.position = "fixed";
         }
     }
 

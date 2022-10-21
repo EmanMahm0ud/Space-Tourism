@@ -14,6 +14,21 @@
   --secondary-color: #d0d6f9;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #0c0d15;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #23263f;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: #0d0e17;
+}
+
 h1 {
   font-size: 150px;
   font-weight: 400;
@@ -101,7 +116,11 @@ nav li {
   color: var(--main-color);
 }
 
-ul :not(.active-nav) li:hover::after,
+nav span {
+  color: var(--main-color);
+}
+
+ul li:hover :not(.active-nav) span::after,
 .destination li:not(.active-destination):hover::after {
   content: "";
   position: absolute;
@@ -117,7 +136,11 @@ li:hover {
   cursor: pointer;
 }
 
-.active-nav li::after,
+.nav-link {
+  padding: 30px 0;
+}
+
+.active-nav span::after,
 li.active-destination::after {
   content: "";
   position: absolute;
@@ -683,18 +706,24 @@ main {
   }
 
   nav li {
-    padding: 5px 30px;
-    padding-right: 60px;
-    margin: 20px 0;
+    padding: 0px;
+    margin: 10px 0;
   }
 
-  nav :not(.active-nav) li:hover::after {
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 10px 30px;
+    padding-right: 60px;
+  }
+
+  nav li:hover :not(.active-nav) span::after {
     right: 0;
     width: 4px;
     height: 100%;
   }
 
-  .active-nav li::after {
+  .active-nav span::after {
     position: absolute;
     right: 0;
     width: 4px;

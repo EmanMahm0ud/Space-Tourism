@@ -38,10 +38,10 @@ function Nav() {
                 <div className="dash"></div>
             </div>
             <ul>
-                <NavLink to="/home" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>00</b> HOME</li></NavLink>
-                <NavLink to="/destination" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>01</b> DESTINATION</li></NavLink>
-                <NavLink to="/crew" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>02</b> CREW</li></NavLink>
-                <NavLink to="/technology" className={({ isActive }) => (isActive ? "active-nav" : "")}><li><b>03</b> TECHNOLOGY</li></NavLink>
+                <li><NavLink to="/home" className={({ isActive }) => (isActive ? "active-nav nav-link" : "nav-link")}><span><b>00</b> HOME</span></NavLink></li>
+                <li><NavLink to="/destination" className={({ isActive }) => (isActive ? "active-nav nav-link" : "nav-link")}><span><b>01</b> DESTINATION</span></NavLink></li>
+                <li><NavLink to="/crew" className={({ isActive }) => (isActive ? "active-nav nav-link" : "nav-link")}><span><b>02</b> CREW</span></NavLink></li>
+                <li><NavLink to="/technology" className={({ isActive }) => (isActive ? "active-nav nav-link" : "nav-link")}><span><b>03</b> TECHNOLOGY</span></NavLink></li>
             </ul>
         </nav>
     );
